@@ -13,9 +13,45 @@
 	</head>
 
 	<body>
+		<!-- declarative rendering	-->
 		<div id="app">
 			{{ message }}
 		</div>
+		
+		<!-- data binding	-->
+		<div id="app-2">
+			<span v-bind:title="message">hover</span>
+		</div>
+		
+		<!-- conditionals	-->
+		<div id="app-3">
+			<span v-if="seen">Now you see me</span>
+		</div>
+		
+		<!-- loops	-->
+		<div id="app-4">
+			<ol>
+				<li v-for="todo in todos">
+					{{ todo.text }}
+				</li>
+			</ol>
+		</div>
+		
+		<!-- user interaction	-->
+		<div id="app-5">
+			<p> {{ message }} </p>
+			<button v-on:click="reverseMessage">Reverse Message</button>
+		</div>
+		
+		<div id="app-6">
+			<p> {{ message }} </p>
+			<input v-model="message">
+		</div>
+		
+		<!-- components	-->
+		<ol>
+			<todo-item></todo-item>
+		</ol>
 
 		<script src="https://unpkg.com/vue"></script>
 		<script src="script.js"></script>
