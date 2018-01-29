@@ -8,11 +8,13 @@
 		<meta name="description" content="The HTML5 Herald">
 		<meta name="author" content="SitePoint">
 
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style/style.css">
 
 	</head>
 
 	<body>
+        <h1>Introduction</h1>
+        
 		<!-- declarative rendering	-->
 		<div id="app">
 			{{ message }}
@@ -49,11 +51,19 @@
 		</div>
 		
 		<!-- components	-->
-		<ol>
-			<todo-item></todo-item>
-		</ol>
+		<div id='app-7'>
+          <ol>
+            <todo-item
+              v-for="item in groceryList"
+              v-bind:todo="item"
+              v-bind:key="item.id">
+            </todo-item>
+          </ol>
+        </div>
+      
+      <a href="vue-instance.html">Vue Instance</a>
 
 		<script src="https://unpkg.com/vue"></script>
-		<script src="script.js"></script>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>

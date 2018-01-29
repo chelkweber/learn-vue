@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Learning Vue</title>
+		<meta name="description" content="The HTML5 Herald">
+		<meta name="author" content="SitePoint">
+
+		<link rel="stylesheet" href="style/style.css">
+
+	</head>
+
+	<body>
+        <h1>Vue Instance</h1>
+        
+        <div id="app-freeze">
+          <p>{{ objFreeze.foo }}</p>
+          <!-- this will no longer update obj.foo! -->
+          <button @click="objFreeze.foo = 'baz'">Change it (Doesn't Work)</button>
+        </div>
+      
+        <div id="app">
+          <p>{{ obj.foo }}</p>
+          <!-- this will no longer update obj.foo! -->
+          <button @click="obj.foo = 'baz'">Change it</button>
+        </div>
+      
+        
+        
+        <a href="index.html">Introduction</a>
+
+		<script src="https://unpkg.com/vue"></script>
+		<script src="scripts/instance.js"></script>
+	</body>
+</html>
